@@ -27,7 +27,7 @@
         </div>
         <div class="flex flex-col sm:flex-row gap-x-6 gap-y-3 w-fit">
             <a href="#Top-Categories" class="text-white font-semibold rounded-[30px] p-[16px_32px] bg-[#FF6129] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FF612980]">Explore Courses</a>
-            <a href="{{ route('front.pricing') }}" target="_blank" class="text-white font-semibold rounded-[30px] p-[16px_32px] ring-1 ring-white transition-all duration-300 hover:ring-2 hover:ring-[#FF6129]">Subscribe</a>
+            <a href="{{ route('front.pricing') }}" target="_blank" class="text-white text-center font-semibold rounded-[30px] p-[16px_32px] ring-1 ring-white transition-all duration-300 hover:ring-2 hover:ring-[#FF6129]">Subscribe</a>
         </div>
     </div>
 
