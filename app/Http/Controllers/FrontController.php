@@ -62,7 +62,7 @@ class FrontController extends Controller
 
             $trasaction = SubscribeTransaction::create($validated);
         });
-        return redirect()->route('dashboard');
+        return redirect()->route('dashboard')->with('success', 'Pembayaran telah diterima. Silakan cek di menu Subscription');
     }
 
     public function learning(Course $course, $courseVideoId)
