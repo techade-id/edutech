@@ -11,7 +11,7 @@
                 <h2 class="font-bold text-3xl md:text-[40px] md:leading-[50px]">Get Your Answers</h2>
                 <p class="text-[#6D7786] md:text-lg -tracking-[2%] mt-3">It's time to upgrade skills without limits!</p>
             </div>
-            <a href="" class="text-white font-semibold rounded-[30px] p-[16px_32px] bg-[#FF6129] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FF612980] w-fit">Contact Us</a>
+            <a href="https://wa.link/4jzjo9" target="_blank" class="text-white font-semibold rounded-[30px] p-[16px_32px] bg-[#FF6129] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FF612980] w-fit">Contact Us</a>
         </div>
 
         <div class="flex flex-col gap-[30px] md:w-[420px] lg:w-[552px] shrink-0">
