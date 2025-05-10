@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
         Route::resource('teachers', TeacherController::class)->middleware('role:owner');
         Route::resource('courses', CourseController::class)->middleware('role:owner|teacher');
         Route::resource('subscribe-transactions', SubscribeTransactionController::class)->middleware('role:owner');
+        Route::get('student-subscription', [SubscribeTransactionController::class, 'student'])->name('student-subscription')->middleware('role:student');
+        Route::get('student-subscription/{subscribeTransaction}', [SubscribeTransactionController::class, 'student_show'])->name('student-subscription.show')->middleware('role:student');
 
         Route::get('/add/video/{course:id}', [CourseVideoController::class, 'create'])
             ->middleware('role:teacher|owner')
