@@ -20,8 +20,8 @@
             <h2 class="font-bold text-[40px] lg:leading-[60px]">Invest & Get Bigger Return</h2>
             <p class="text-lg -tracking-[2%]">Catching up the on demand skills and high paying career this year</p>
         </div>
-        <div class="max-w-[1000px] w-full flex flex-col md:flex-row gap-[30px] md:px-7">
-            <div class="flex flex-col order-2 md:order-1 rounded-3xl p-8 gap-[30px] lg:bg-white border-2 border-green-600 lg:border-none h-fit">
+        <div class="max-w-[1000px] w-full flex flex-col mb-14 md:flex-row gap-[30px] md:px-7">
+            <div class="flex flex-col order-2 md:order-1 rounded-3xl p-8 gap-[30px] lg:bg-white lg:shadow-xl border-2 border-green-600 lg:border-none h-fit">
                 <div class="flex flex-col gap-5">
                     <div class="flex flex-col gap-4">
                         <p class="font-semibold text-4xl leading-[54px]">Scholarship</p>
@@ -48,7 +48,7 @@
                 </div>
                 <a href="https://wa.link/8njc5y" target="_blank" class="p-[20px_32px] rounded-full text-center font-semibold text-xl ring-1 ring-black transition-all duration-300 hover:ring-2 hover:ring-[#FF6129]">Request for Access</a>
             </div>
-            <div class="flex flex-col order-1 md:order-2 rounded-3xl p-8 gap-[30px] text-white lg:text-black lg:bg-white bg-green-600 h-fit">
+            <div class="flex flex-col order-1 md:order-2 rounded-3xl p-8 gap-[30px] text-white lg:text-black lg:shadow-xl lg:bg-white bg-green-600 h-fit">
                 <div class="flex flex-col gap-5">
                     <div class="flex flex-col gap-4">
                         <p class="font-semibold text-4xl leading-[54px]">Premium</p>
