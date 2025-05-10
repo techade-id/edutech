@@ -15,6 +15,11 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    @role('student')
+                    <x-nav-link :href="route('admin.student-subscription')" :active="request()->routeIs('admin.student-subscription*')">
+                        {{ __('Subscription') }}
+                    </x-nav-link>
+                    @endrole
                     @role('owner')
                     <x-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories*')">
                         {{ __('Manage Categories') }}
@@ -88,18 +93,24 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            @role('owner')
             <x-responsive-nav-link :href="route('admin.categories.index')" :active="request()->routeIs('admin.categories*')">
                 {{ __('Manage Categories') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('admin.teachers.index')" :active="request()->routeIs('admin.teachers*')">
                 {{ __('Manage Teachers') }}
             </x-responsive-nav-link>
+            @endrole
+            @role('owner|teacher')
             <x-responsive-nav-link :href="route('admin.courses.index')" :active="request()->routeIs('admin.courses*')">
                 {{ __('Manage Courses') }}
             </x-responsive-nav-link>
+            @endrole
+            @role('owner')
             <x-responsive-nav-link :href="route('admin.subscribe-transactions.index')" :active="request()->routeIs('admin.subscribe-transactions*')">
                 {{ __('Manage Subscriptions') }}
             </x-responsive-nav-link>
+            @endrole
         </div>
 
         <!-- Responsive Settings Options -->
