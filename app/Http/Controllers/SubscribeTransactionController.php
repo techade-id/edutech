@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SubscribeTransaction;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\SubscribeTransaction;
+use Illuminate\Support\Facades\Auth;
 
 class SubscribeTransactionController extends Controller
 {
@@ -16,6 +17,25 @@ class SubscribeTransactionController extends Controller
     {
         $transactions = SubscribeTransaction::with(['user'])->orderByDesc('id')->get();
         return view('admin.transactions.index', compact('transactions'));
+    }
+
+    public function student()
+    {
+        $user = Auth::user();
+        $query = SubscribeTransaction::with(['user'])->orderByDesc('id');
+
+        // buat kondisi jika student yang login, tampilkan data transaction untuk student tersebut saja
+        if ($user->hasRole('student')) {
+            $query->where('user_id',  $user->id);
+        }
+
+        $transactions = $query->get();
+        return view('admin.student.index', compact('transactions'));
+    }
+
+    public function student_show(SubscribeTransaction $subscribeTransaction)
+    {
+        return view('admin.student.show', compact('subscribeTransaction'));
     }
 
     /**
