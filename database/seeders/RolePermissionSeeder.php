@@ -30,19 +30,29 @@ class RolePermissionSeeder extends Seeder
             'name' => 'Admin Techade',
             'occupation' => 'Owner',
             'whatsapp' => '087812066967',
-            'avatar' => 'avatars/default-avatar.svg',
+            'avatar' => 'avatars/techade.png',
             'email' => 'admin@techade.id',
             'password' => bcrypt('tekadkanmimpi2025')
         ]);
-        $userOwner = User::create([
+        $userOwner2 = User::create([
             'name' => 'Admin Sani',
             'occupation' => 'Owner',
             'whatsapp' => '087812066967',
-            'avatar' => 'avatars/default-avatar.svg',
+            'avatar' => 'avatars/abdillah.jpg',
             'email' => 'abdillah@techade.id',
+            'password' => bcrypt('tekadkanmimpi2025')
+        ]);
+        $userOwner3 = User::create([
+            'name' => 'Admin Azham',
+            'occupation' => 'Owner',
+            'whatsapp' => '0895379181484',
+            'avatar' => 'avatars/azham.jpg',
+            'email' => 'azham@techade.id',
             'password' => bcrypt('tekadkanmimpi2025')
         ]);
 
         $userOwner->assignRole($ownerRole);
+        $userOwner2->assignRole($ownerRole);
+        $userOwner3->assignRole($ownerRole);
     }
 }
