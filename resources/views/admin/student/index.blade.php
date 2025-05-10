@@ -4,9 +4,6 @@
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 {{ __('Student Subscription') }}
             </h2>
-            <a href="{{ route('admin.teachers.create') }}" class="font-bold text-sm md:text-base py-2 px-4 bg-indigo-700 hover:bg-indigo-500 text-white rounded-full">
-                Add New
-            </a>
         </div>
     </x-slot>
 
