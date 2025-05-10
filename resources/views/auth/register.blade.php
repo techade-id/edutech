@@ -18,7 +18,7 @@
 
         <!-- Occupation -->
         <div class="mt-4">
-            <x-input-label for="occupation" :value="__('Occupation')" />
+            <x-input-label for="occupation" :value="__('Bidang Minat')" />
             <x-text-input id="occupation" class="block mt-1 w-full placeholder:text-gray-400" type="text" name="occupation" :value="old('occupation')" placeholder="Web Developer, UI Designer, etc" required autocomplete="username" />
             <x-input-error :messages="$errors->get('occupation')" class="mt-2" />
         </div>
@@ -58,6 +58,14 @@
                 name="password_confirmation" required autocomplete="new-password" />
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
+        <!-- Show Pass -->
+        <div class="block mt-4">
+            <label for="show_pass" class="inline-flex items-center">
+                <input id="show_pass" onclick="togglePasswords()" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500">
+                <span class="ms-2 text-sm text-gray-600">{{ __('Show Password') }}</span>
+            </label>
         </div>
 
         <div class="flex items-center justify-end mt-4">

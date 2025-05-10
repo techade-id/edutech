@@ -18,8 +18,8 @@
 </head>
 
 <body class="font-sans text-gray-900 antialiased">
-    <div class="min-h-screen flex flex-col sm:justify-center items-center py-20 sm:pt-0 bg-gray-100">
-        <div class="pt-10">
+    <div class="min-h-screen flex flex-col sm:justify-center items-center px-4 py-20 lg:py-10 bg-gray-100">
+        <div class="">
             <a href="/">
                 <img src="{{ asset('assets/logo/Logo-Techade-1.png') }}" class="h-28" alt="" srcset="">
             </a>
@@ -29,6 +29,24 @@
             {{ $slot }}
         </div>
     </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById("password");
+            passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+        }
+
+        function togglePasswords() {
+            const passwordFields = [
+                document.getElementById("password"),
+                document.getElementById("password_confirmation")
+            ];
+
+            passwordFields.forEach(field => {
+                field.type = field.type === "password" ? "text" : "password";
+            });
+        }
+    </script>
 </body>
 
 </html>
